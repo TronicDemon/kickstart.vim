@@ -206,6 +206,8 @@ Plug 'ghifarit53/tokyonight-vim'
 
 " Set airline as statusline
 Plug 'vim-airline/vim-airline'
+
+Plug 'easymotion/vim-easymotion'
 call plug#end()
 
 
@@ -216,6 +218,25 @@ let g:tokyonight_style = 'night'    " available: night, storm
 let g:tokyonight_enable_italic = 0  " Disable italics in comments
 colorscheme tokyonight
 
+" [[ Configure Easymotion ]]
+
+map <leader> <plug>(easymotion-prefix)
+
+let g:EasyMotion_do_mapping = 0 " Disable Default mappings
+
+"Jump to anywhfere you want with minimal keystrokes, with just
+" s{char}{lable}
+nmap s <plug>(easymotion-overwin-f)
+" or s{char}{char}{lable}
+" Need one more keystorke, but on average, it may be more comfortable.
+nmap s <plug>(easymotion-overwin-f2)
+
+" Turn on case-insensitve feature
+let g:EasyMotion_smartcase = 1
+
+" JK motions: Line motions
+map <leader>j <Plug>(easymotion-j)
+map <leader>k <Plug>(easymotion-k)
 
 " [[ Configure vim-which-key ]]
 call which_key#register('<Space>', "g:which_key_map")
@@ -302,6 +323,7 @@ inoremap <expr> <CR>    pumvisible() ? asyncomplete#close_popup() : "\<CR>""
 
 let g:asyncomplete_auto_completeopt = 0
 set completeopt=menuone,noinsert,noselect,preview
+
 
 
 " The line beneath this is called `modeline`. See `:help modeline`
