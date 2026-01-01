@@ -216,17 +216,36 @@ call plug#end()
 set termguicolors                   " Enable RGB colors
 let g:tokyonight_style = 'night'    " available: night, storm
 let g:tokyonight_enable_italic = 0  " Disable italics in comments
+
+"syntax enable
+"set background=light
 colorscheme tokyonight
+
+" [[ Configure Motions inspired by Helix ]]
+"let g:which_key_map.m.m = {'name' : '[M]atching Brackets'}
+nmap mm %
+
+"let g:which_key_map.m.i = 'Mark interior of'
+"nmap mi vi 
+
+
+"let g:which_key_map.g = 'Goto'
+nmap gs ^
+nmap ge G
+nmap gg gg
+nmap gl <C-]>
+nmap gh <C-T>
+
+
 
 " [[ Configure Easymotion ]]
 
 map <leader> <plug>(easymotion-prefix)
-
 let g:EasyMotion_do_mapping = 0 " Disable Default mappings
 
 "Jump to anywhfere you want with minimal keystrokes, with just
 " s{char}{lable}
-nmap s <plug>(easymotion-overwin-f)
+nmap S <plug>(easymotion-overwin-f)
 " or s{char}{char}{lable}
 " Need one more keystorke, but on average, it may be more comfortable.
 nmap s <plug>(easymotion-overwin-f2)
@@ -235,10 +254,13 @@ nmap s <plug>(easymotion-overwin-f2)
 let g:EasyMotion_smartcase = 1
 
 " JK motions: Line motions
+"let g:which_key_map.j = 'Easymotion Downwards'
 map <leader>j <Plug>(easymotion-j)
 map <leader>k <Plug>(easymotion-k)
 
 " [[ Configure vim-which-key ]]
+call which_key#register('g', "g:which_key_gmap", 'n')
+nnoremap <silent> g :<c-u>WhichKey 'g'<CR>
 call which_key#register('<Space>', "g:which_key_map")
 nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
 nnoremap <silent> <localleader> :<c-u>WhichKey  '<Space>'<CR>
@@ -247,6 +269,19 @@ nnoremap <silent> <localleader> :<c-u>WhichKey  '<Space>'<CR>
 let g:which_key_map =  {}
 let g:which_key_map.s = { 'name' : '[S]earch' }
 let g:which_key_map.h = { 'name' : 'Git [H]unk' }
+let g:which_key_map.j = 'Easymotion Lines Downward'
+let g:which_key_map.k = 'Easymotion Lines Upward'
+let g:which_key_gmap = {}
+let g:which_key_gmap.s = 'First non-blank Position in Line'
+let g:which_key_gmap.g = 'First Line'
+let g:which_key_gmap.e = 'Last Line'
+let g:which_key_gmap.l = 'Follow the Tag'
+let g:which_key_gmap.h = 'Go back to Tag Location'
+let g:which_key_gmap.cc = 'which_key_ignore'
+let g:which_key_gmap.c = 'which_key_ignore'
+let g:which_key_gmap.f = 'which_key_ignore'
+let g:which_key_gmap.x = 'which_key_ignore'
+
 
 
 " [[ Configure fzf.vim ]]
