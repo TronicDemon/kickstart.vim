@@ -206,6 +206,7 @@ Plug 'ghifarit53/tokyonight-vim'
 
 " Set airline as statusline
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-theme'
 
 Plug 'easymotion/vim-easymotion'
 call plug#end()
@@ -221,6 +222,10 @@ let g:tokyonight_enable_italic = 0  " Disable italics in comments
 "set background=light
 colorscheme tokyonight
 
+if getcwd() ==# '/home/mainuser/MyOwn'
+  colorscheme newsprint
+endif
+
 " [[ Configure Motions inspired by Helix ]]
 "let g:which_key_map.m.m = {'name' : '[M]atching Brackets'}
 nmap mm %
@@ -233,8 +238,12 @@ nmap mm %
 nmap gs ^
 nmap ge G
 nmap gg gg
+nmap gd $
 nmap gl <C-]>
 nmap gh <C-T>
+nmap ga 0
+nmap gj <Plug>(easymotion-j)
+nmap gk <Plug>(easymotion-k)
 
 
 
@@ -277,6 +286,10 @@ let g:which_key_gmap.g = 'First Line'
 let g:which_key_gmap.e = 'Last Line'
 let g:which_key_gmap.l = 'Follow the Tag'
 let g:which_key_gmap.h = 'Go back to Tag Location'
+let g:which_key_gmap.a = '[A]t the start of the line'
+let g:which_key_gmap.d = 'To the En[d]'
+let g:which_key_gmap.j = 'Easymotion Line Down'
+let g:which_key_gmap.k = 'Easymotion Line Up'
 let g:which_key_gmap.cc = 'which_key_ignore'
 let g:which_key_gmap.c = 'which_key_ignore'
 let g:which_key_gmap.f = 'which_key_ignore'
