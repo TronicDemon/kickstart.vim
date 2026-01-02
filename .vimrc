@@ -249,6 +249,8 @@ nmap ga 0
 nmap gj <Plug>(easymotion-j)
 nmap gk <Plug>(easymotion-k)
 
+vmap gj <Plug>(easymotion-j)
+vmap gk <Plug>(easymotion-k)
 " TODO Implement Windows Movment with <leader>
 
 
