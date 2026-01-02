@@ -206,7 +206,7 @@ Plug 'ghifarit53/tokyonight-vim'
 
 " Set airline as statusline
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-theme'
+"Plug 'vim-airline/vim-airline-theme'
 
 Plug 'easymotion/vim-easymotion'
 call plug#end()
@@ -217,13 +217,17 @@ call plug#end()
 set termguicolors                   " Enable RGB colors
 let g:tokyonight_style = 'night'    " available: night, storm
 let g:tokyonight_enable_italic = 0  " Disable italics in comments
+let g:airline_theme = 'angr'
+
 
 "syntax enable
 "set background=light
 colorscheme tokyonight
 
 if getcwd() ==# '/home/mainuser/MyOwn'
+  let g:airline_theme = 'silver'
   colorscheme newsprint
+  
 endif
 
 " [[ Configure Motions inspired by Helix ]]
@@ -244,6 +248,8 @@ nmap gh <C-T>
 nmap ga 0
 nmap gj <Plug>(easymotion-j)
 nmap gk <Plug>(easymotion-k)
+
+" TODO Implement Windows Movment with <leader>
 
 
 
