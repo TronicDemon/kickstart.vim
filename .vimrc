@@ -158,6 +158,13 @@ nnoremap <C-l> <C-w><C-l>
 nnoremap <C-j> <C-w><C-j>
 nnoremap <C-k> <C-w><C-k>
 
+nnoremap <leader>wh <C-w><C-h>
+nnoremap <leader>wl <C-w><C-l>
+nnoremap <leader>wj <C-w><C-j>
+nnoremap <leader>wk <C-w><C-k>
+nnoremap <leader>wq <C-w><C-q>
+nnoremap <leader>wv <C-w><C-v>
+
 
 " [[ Install `vim-plug` plugin manager ]]
 "    See https://github.com/junegunn/vim-plug/ for more info
@@ -262,10 +269,10 @@ let g:EasyMotion_do_mapping = 0 " Disable Default mappings
 
 "Jump to anywhfere you want with minimal keystrokes, with just
 " s{char}{lable}
-nmap S <plug>(easymotion-overwin-f)
+nmap gS <plug>(easymotion-lineanyware)
 " or s{char}{char}{lable}
 " Need one more keystorke, but on average, it may be more comfortable.
-nmap s <plug>(easymotion-overwin-f2)
+nmap gv <plug>(easymotion-sl)
 
 " Turn on case-insensitve feature
 let g:EasyMotion_smartcase = 1
