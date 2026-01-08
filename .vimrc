@@ -234,7 +234,11 @@ colorscheme tokyonight
 if getcwd() ==# '/home/mainuser/MyOwn'
   let g:airline_theme = 'silver'
   colorscheme newsprint
-  
+endif
+
+if getcwd() ==# '/home/mainuser/MyOwn/memory'
+  let g:airline_theme = 'silver'
+  colorscheme newsprint
 endif
 
 " [[ Configure Motions inspired by Helix ]]
@@ -250,8 +254,8 @@ nmap gs ^
 nmap ge G
 nmap gg gg
 nmap gd $
-nmap gl <C-]>
-nmap gh <C-T>
+nmap gtl <C-]>
+nmap gth <C-T>
 nmap ga 0
 nmap gj <Plug>(easymotion-j)
 nmap gk <Plug>(easymotion-k)
@@ -269,7 +273,7 @@ let g:EasyMotion_do_mapping = 0 " Disable Default mappings
 
 "Jump to anywhfere you want with minimal keystrokes, with just
 " s{char}{lable}
-nmap gS <plug>(easymotion-lineanyware)
+"nmap gh <plug>(easymotion-lineanyware)
 " or s{char}{char}{lable}
 " Need one more keystorke, but on average, it may be more comfortable.
 nmap gv <plug>(easymotion-sl)
@@ -299,8 +303,9 @@ let g:which_key_gmap = {}
 let g:which_key_gmap.s = 'First non-blank Position in Line'
 let g:which_key_gmap.g = 'First Line'
 let g:which_key_gmap.e = 'Last Line'
-let g:which_key_gmap.l = 'Follow the Tag'
-let g:which_key_gmap.h = 'Go back to Tag Location'
+let g:which_key_gmap.t = { 'name' : 'Tags' }
+let g:which_key_gmap.t.l = 'Follow the Tag'
+let g:which_key_gmap.t.h = 'Go back to Tag Location'
 let g:which_key_gmap.a = '[A]t the start of the line'
 let g:which_key_gmap.d = 'To the En[d]'
 let g:which_key_gmap.j = 'Easymotion Line Down'
