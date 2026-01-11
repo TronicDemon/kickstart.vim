@@ -277,6 +277,7 @@ let g:EasyMotion_do_mapping = 0 " Disable Default mappings
 " or s{char}{char}{lable}
 " Need one more keystorke, but on average, it may be more comfortable.
 nmap gv <plug>(easymotion-sl)
+nmap gw <plug>(easymotion-overwin-w)
 
 " Turn on case-insensitve feature
 let g:EasyMotion_smartcase = 1
