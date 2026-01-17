@@ -48,6 +48,7 @@ set history=10000 incsearch
 set nojoinspaces laststatus=2 ruler
 set showcmd smarttab nostartofline
 set switchbuf=uselast wildmenu "wildoptions=pum,tagfile
+set expandtab
 
 " [[ Settings other options ]]
 " See `:help :set`
