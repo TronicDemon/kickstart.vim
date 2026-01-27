@@ -125,6 +125,8 @@ set scrolloff=10
 " See `:help 'confirm'`
 set confirm
 
+set tags+=/home/mainuser/MyOwn/tags
+
 
 " [[ Basic Keymaps ]]
 
