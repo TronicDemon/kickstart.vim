@@ -32,7 +32,7 @@
 " Set <space> as the leader key
 " See `:help mapleader`
 let mapleader=' '
-let maplocalleader = ','
+let maplocalleader = ' '
 
 
 
@@ -221,10 +221,15 @@ Plug 'vim-airline/vim-airline'
 
 Plug 'easymotion/vim-easymotion'
 
-Plug 'lervag\vimtex'
-Plug 'lervag\vimtex', {'tag': 'v2.15' }
+Plug 'lervag/vimtex'
+Plug 'lervag/vimtex', { 'tag': 'v2.15' }
 call plug#end()
 
+
+" VimTex options
+let g:vimtex_view_general_viewer = 'evince'
+let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
+let g:vimtex_mappings_prefix = ","
 
 " [[ Configure plugins ]]
 " Set colorscheme
