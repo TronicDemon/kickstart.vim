@@ -32,7 +32,8 @@
 " Set <space> as the leader key
 " See `:help mapleader`
 let mapleader=' '
-let maplocalleader = ' '
+let maplocalleader = ','
+
 
 
 " [[ Setting Neovim default options ]]
@@ -219,6 +220,9 @@ Plug 'vim-airline/vim-airline'
 "Plug 'vim-airline/vim-airline-theme'
 
 Plug 'easymotion/vim-easymotion'
+
+Plug 'lervag\vimtex'
+Plug 'lervag\vimtex', {'tag': 'v2.15' }
 call plug#end()
 
 
