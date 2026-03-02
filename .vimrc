@@ -269,8 +269,8 @@ nmap gd $
 nmap gtl <C-]>
 nmap gth <C-T>
 nmap ga 0
-nmap gj <Plug>(easymotion-j)
-nmap gk <Plug>(easymotion-k)
+"nmap gj <Plug>(easymotion-j)
+"nmap gk <Plug>(easymotion-k)
 
 vmap gj <Plug>(easymotion-j)
 vmap gk <Plug>(easymotion-k)
@@ -300,8 +300,8 @@ map <leader>j <Plug>(easymotion-j)
 map <leader>k <Plug>(easymotion-k)
 
 " [[ Configure vim-which-key ]]
-call which_key#register('g', "g:which_key_gmap", 'n')
-nnoremap <silent> g :<c-u>WhichKey 'g'<CR>
+"call which_key#register('g', "g:which_key_gmap", 'n')
+"nnoremap <silent> g :<c-u>WhichKey 'g'<CR>
 call which_key#register('<Space>', "g:which_key_map")
 nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
 nnoremap <silent> <localleader> :<c-u>WhichKey  '<Space>'<CR>
@@ -312,21 +312,21 @@ let g:which_key_map.s = { 'name' : '[S]earch' }
 let g:which_key_map.h = { 'name' : 'Git [H]unk' }
 let g:which_key_map.j = 'Easymotion Lines Downward'
 let g:which_key_map.k = 'Easymotion Lines Upward'
-let g:which_key_gmap = {}
-let g:which_key_gmap.s = 'First non-blank Position in Line'
-let g:which_key_gmap.g = 'First Line'
-let g:which_key_gmap.e = 'Last Line'
-let g:which_key_gmap.t = { 'name' : 'Tags' }
-let g:which_key_gmap.t.l = 'Follow the Tag'
-let g:which_key_gmap.t.h = 'Go back to Tag Location'
-let g:which_key_gmap.a = '[A]t the start of the line'
-let g:which_key_gmap.d = 'To the En[d]'
-let g:which_key_gmap.j = 'Easymotion Line Down'
-let g:which_key_gmap.k = 'Easymotion Line Up'
-let g:which_key_gmap.cc = 'which_key_ignore'
-let g:which_key_gmap.c = 'which_key_ignore'
-let g:which_key_gmap.f = 'which_key_ignore'
-let g:which_key_gmap.x = 'which_key_ignore'
+"let g:which_key_gmap = {}
+"let g:which_key_gmap.s = 'First non-blank Position in Line'
+"let g:which_key_gmap.g = 'First Line'
+"let g:which_key_gmap.e = 'Last Line'
+"let g:which_key_gmap.t = { 'name' : 'Tags' }
+"let g:which_key_gmap.t.l = 'Follow the Tag'
+"let g:which_key_gmap.t.h = 'Go back to Tag Location'
+"let g:which_key_gmap.a = '[A]t the start of the line'
+"let g:which_key_gmap.d = 'To the En[d]'
+"let g:which_key_gmap.j = 'Easymotion Line Down'
+"let g:which_key_gmap.k = 'Easymotion Line Up'
+"let g:which_key_gmap.cc = 'which_key_ignore'
+"let g:which_key_gmap.c = 'which_key_ignore'
+"let g:which_key_gmap.f = 'which_key_ignore'
+"let g:which_key_gmap.x = 'which_key_ignore'
 
 
 
