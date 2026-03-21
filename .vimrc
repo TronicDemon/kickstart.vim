@@ -221,20 +221,20 @@ Plug 'vim-airline/vim-airline'
 
 Plug 'easymotion/vim-easymotion'
 
-Plug 'lervag/vimtex'
-Plug 'lervag/vimtex', { 'tag': 'v2.15' }
+"Plug 'lervag/vimtex'
+"Plug 'lervag/vimtex', { 'tag': 'v2.15' }
 call plug#end()
 
 
 " VimTex options
-let g:vimtex_view_general_viewer = 'evince'
-let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
-let g:vimtex_mappings_prefix = ","
+"let g:vimtex_view_general_viewer = 'evince'
+"let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
+"let g:vimtex_mappings_prefix = ","
 
 " [[ Configure plugins ]]
 " Set colorscheme
 set termguicolors                   " Enable RGB colors
-let g:tokyonight_style = 'night'    " available: night, storm
+let g:tokyonight_style = 'storm'    " available: night, storm
 let g:tokyonight_enable_italic = 0  " Disable italics in comments
 let g:airline_theme = 'angr'
 
@@ -359,6 +359,7 @@ let g:which_key_map['/'] = '[/] Fuzzily search in current buffer'
 " Performance related settings, requires Vim 8.2+
 let g:lsp_use_native_client = 1
 let g:lsp_semantic_enabled = 1
+let g:lsp_diagnostics_enabled = 0
 
 function! s:on_lsp_buffer_enabled() abort
   setlocal omnifunc=lsp#complete
@@ -395,6 +396,11 @@ augroup lsp_install
   " call s:on_lsp_buffer_enabled only for languages that has the server registered.
   autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
+
+let g:Tex_IgnoredWarings =
+      \'Underfull'."\n".
+      \'Overfull'."\n"
+let g:Tex_IgnoreLevle = 8
 
 
 " [[ Configure completion ]]
