@@ -236,12 +236,11 @@ call plug#end()
 set termguicolors                   " Enable RGB colors
 let g:tokyonight_style = 'storm'    " available: night, storm
 let g:tokyonight_enable_italic = 0  " Disable italics in comments
-let g:airline_theme = 'angr'
-
+let g:airline_theme = 'zenburn'
 
 "syntax enable
-"set background=light
-colorscheme tokyonight
+set background=light
+colorscheme catppuccin
 
 if getcwd() ==# '/home/mainuser/MyOwn'
   let g:airline_theme = 'silver'
