@@ -220,6 +220,7 @@ Plug 'rakr/vim-one'
 Plug 'vim-scripts/pyte'
 "Plug 'vim-scripts/zenesque'
 Plug 'preservim/vim-colors-pencil'
+Plug 'zenbones-theme/zenbones'
 
 
 
@@ -248,7 +249,12 @@ let g:airline_theme = 'zenburn'
 
 "syntax enable
 set background=light
-colorscheme stainless
+colorscheme zenwritten
+"good colorschemes are:
+" stainless
+" newsprint
+" zenesque
+" zenbones / zenwritten
 
 if getcwd() ==# '/home/mainuser/MyOwn'
   let g:airline_theme = 'silver'
