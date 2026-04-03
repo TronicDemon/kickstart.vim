@@ -214,6 +214,14 @@ Plug 'prabirshrestha/asyncomplete-lsp.vim'
 
 " Colorscheme
 Plug 'ghifarit53/tokyonight-vim'
+Plug 'yorickpeterse/vim-paper'
+Plug 'rakr/vim-two-firewatch'
+Plug 'rakr/vim-one'
+Plug 'vim-scripts/pyte'
+"Plug 'vim-scripts/zenesque'
+Plug 'preservim/vim-colors-pencil'
+
+
 
 " Set airline as statusline
 Plug 'vim-airline/vim-airline'
@@ -240,7 +248,7 @@ let g:airline_theme = 'zenburn'
 
 "syntax enable
 set background=light
-colorscheme catppuccin
+colorscheme stainless
 
 if getcwd() ==# '/home/mainuser/MyOwn'
   let g:airline_theme = 'silver'
