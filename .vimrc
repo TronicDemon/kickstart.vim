@@ -103,7 +103,7 @@ set updatetime=250
 
 " Decrease mapped sequence wait time
 " Displays vim-which-key sooner
-set timeoutlen=300
+set timeoutlen=250
 
 " Configure how new splits should be opened
 set splitright
@@ -135,6 +135,7 @@ set tags+=/home/mainuser/MyOwn/tags
 set hlsearch
 nnoremap <Esc> :nohlsearch<CR>
 inoremap jk <esc>
+vnoremap jk <esc>
 
 " Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 " for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
