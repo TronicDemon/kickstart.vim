@@ -134,6 +134,7 @@ set tags+=/home/mainuser/MyOwn/tags
 " Set highlight on search, but clear on pressing <Esc> in normal mode
 set hlsearch
 nnoremap <Esc> :nohlsearch<CR>
+inoremap jk <esc>
 
 " Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 " for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
