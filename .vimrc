@@ -234,8 +234,12 @@ Plug 'easymotion/vim-easymotion'
 
 "Plug 'lervag/vimtex'
 "Plug 'lervag/vimtex', { 'tag': 'v2.15' }
+"
+Plug 'vimwiki/vimwiki'
 call plug#end()
 
+
+let g:vimwiki_list = [{'path': '~/vimwiki/'}]
 
 " VimTex options
 "let g:vimtex_view_general_viewer = 'evince'
