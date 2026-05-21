@@ -126,7 +126,7 @@ set scrolloff=10
 " See `:help 'confirm'`
 set confirm
 
-set tags+=/home/mainuser/MyOwn/tags
+"set tags+=/home/mainuser/MyOwn/tags
 
 
 " [[ Basic Keymaps ]]
@@ -177,8 +177,10 @@ nnoremap <leader>wv <C-w><C-v>
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
   silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+  autocmd VimEnter * echo "(>^.^<)" | source $MYVIMRC
 endif
+
+autocmd VimEnter * echo "(>^.^<)"
 
 " [[ Install plugins ]]
 "  To check the current status of your plugins, run
@@ -206,9 +208,9 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " Enable LSP
-Plug 'prabirshrestha/vim-lsp'
+"Plug 'prabirshrestha/vim-lsp'
 " Install language servers and configure them for vim-lsp
-Plug 'mattn/vim-lsp-settings'
+"Plug 'mattn/vim-lsp-settings'
 
 " Autocompletion
 Plug 'prabirshrestha/asyncomplete.vim'
@@ -410,11 +412,11 @@ function! s:on_lsp_buffer_enabled() abort
   let g:which_key_map.f = '[F]ormat buffer'
 endfunction
 
-augroup lsp_install
-  au!
-  " call s:on_lsp_buffer_enabled only for languages that has the server registered.
-  autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
-augroup END
+"augroup lsp_install
+" au!
+" " call s:on_lsp_buffer_enabled only for languages that has the server registered.
+" autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
+"augroup END
 
 let g:Tex_IgnoredWarings =
       \'Underfull'."\n".
@@ -423,9 +425,9 @@ let g:Tex_IgnoreLevle = 8
 
 
 " [[ Configure completion ]]
-inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <CR>    pumvisible() ? asyncomplete#close_popup() : "\<CR>""
+"inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+"inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+"inoremap <expr> <CR>    pumvisible() ? asyncomplete#close_popup() : "\<CR>""
 
 let g:asyncomplete_auto_completeopt = 0
 set completeopt=menuone,noinsert,noselect,preview
@@ -434,3 +436,5 @@ set completeopt=menuone,noinsert,noselect,preview
 
 " The line beneath this is called `modeline`. See `:help modeline`
 " vim: ts=2 sts=2 sw=2 et
+"
+
